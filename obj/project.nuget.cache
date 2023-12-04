@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "U+8SXG3m7xZV6a5z4xrkq3jSweKzYZhYnVC6a5tMWncibZ18nzcy3ncUK3VkwetN5vanEsq8af/8I+XcSd0Ssg==",
+  "dgSpecHash": "pj8Npd49YR9upTSVBYqB8W18dupAU+OhSLhB8BJHqBQZbf6D5Fz2qcwYhtbKm0htGazbaaUJywPqJVgFzMLxHw==",
   "success": true,
   "projectFilePath": "F:\\github\\WebSocketReverseShellDotNet\\WebSocketReverseShellDotNet\\WebSocketReverseShellDotNet.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\moham\\.nuget\\packages\\fluentbuilder\\0.9.0\\fluentbuilder.0.9.0.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.8.0\\microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",

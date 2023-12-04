@@ -46,6 +46,12 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentBuilder": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"

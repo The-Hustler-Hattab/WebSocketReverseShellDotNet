@@ -2,6 +2,9 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "FluentBuilder/0.9.0": {
+        "type": "package"
+      },
       "Microsoft.CodeCoverage/17.8.0": {
         "type": "package",
         "compile": {
@@ -351,6 +354,20 @@
     }
   },
   "libraries": {
+    "FluentBuilder/0.9.0": {
+      "sha512": "7YzuZUp7ZJCUlmVTS6ezcY9AdyQf26hrPsPtC/X7lGNAzxp5RrDD+kmqFXDdfha2frlvyUC4fIsmdl7mo25UNQ==",
+      "type": "package",
+      "path": "fluentbuilder/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "PackageReadme.md",
+        "analyzers/dotnet/cs/FluentBuilderGenerator.dll",
+        "fluentbuilder.0.9.0.nupkg.sha512",
+        "fluentbuilder.nuspec",
+        "icon.png"
+      ]
+    },
     "Microsoft.CodeCoverage/17.8.0": {
       "sha512": "KC8SXWbGIdoFVdlxKk9WHccm0llm9HypcHMLUUFabRiTS3SO2fQXNZfdiF3qkEdTJhbRrxhdRxjL4jbtwPq4Ew==",
       "type": "package",
@@ -729,6 +746,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "FluentBuilder >= 0.9.0",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "NUnit >= 4.0.1",
       "NUnit3TestAdapter >= 4.5.0"
@@ -781,6 +799,12 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "FluentBuilder": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[0.9.0, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.8.0, )"
