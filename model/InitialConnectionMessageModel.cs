@@ -9,15 +9,28 @@ namespace WebSocketReverseShellDotNet.model
 {
     internal class InitialConnectionMessageModel
     {
-        private string SessionId { get; set; }
-        private string InitialMessage { get; set; }
+        private string sessionId;
+
+        public string GetSessionId()
+        {
+            return sessionId;
+        }
+
+        public void SetSessionId(string value)
+        {
+            sessionId = value;
+        }
+
+        private string InitialMessage;
+
+
 
         [JsonConstructor]
         public InitialConnectionMessageModel(
             [JsonProperty("sessionId")] string sessionId,
             [JsonProperty("initialMessage")] string initialMessage)
         {
-            SessionId = sessionId;
+            SetSessionId(sessionId);
             InitialMessage = initialMessage;
         }
     }

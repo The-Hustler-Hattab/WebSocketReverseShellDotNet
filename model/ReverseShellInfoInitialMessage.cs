@@ -14,33 +14,33 @@ namespace WebSocketReverseShellDotNet.model
     public class ReverseShellInfoInitialMessage
     {
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string? OsName { get; set; }
+        public string? osName { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string? OsVersion { get; set; }
+        public string? osVersion { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string? OsArch { get; set; }
+        public string? osArch { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string? UserName { get; set; }
+        public string? userName { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string? UserHome { get; set; }
+        public string? userHome { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string? UserCurrentWorkingDir { get; set; }
+        public string? userCurrentWorkingDir { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string? UserLanguage { get; set; }
+        public string? userLanguage { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string? UserPublicIp { get; set; }
+        public string? userPublicIp { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string? MalwareType { get; set; }
+        public string? malwareType { get; set; }
 
-        public string? Reply { get; set; }
+        public string? reply { get; set; }
 
 
         public override string ToString()

