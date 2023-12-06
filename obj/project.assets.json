@@ -338,6 +338,26 @@
           "build/netcoreapp3.1/NUnit3TestAdapter.props": {}
         }
       },
+      "Plugin.Screenshot/0.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/Plugin.Screenshot.Abstractions.dll": {},
+          "lib/portable-net45+win+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/Plugin.Screenshot.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/Plugin.Screenshot.Abstractions.dll": {},
+          "lib/portable-net45+win+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/Plugin.Screenshot.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
       "System.Reflection.Metadata/1.6.0": {
         "type": "package",
         "compile": {
@@ -348,6 +368,38 @@
         "runtime": {
           "lib/netstandard2.0/System.Reflection.Metadata.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Xam.Plugin.Screenshot/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Plugin.Screenshot.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Screenshot.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.5.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -722,6 +774,70 @@
         "nunit_256.png"
       ]
     },
+    "Plugin.Screenshot/0.0.1": {
+      "sha512": "XWw1bmN0V3PxKQM1toXa5rgM+n6ZJzwDgGIff5krLeYuXsSa6eQH2wRIKgscgijF1pDXjHK6Yn1cvnmaT0x/1Q==",
+      "type": "package",
+      "path": "plugin.screenshot/0.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Plugin.Screenshot.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Screenshot.dll",
+        "lib/Xamarin.iOS10/Plugin.Screenshot.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Screenshot.dll",
+        "lib/portable-net45+win+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/Plugin.Screenshot.Abstractions.dll",
+        "lib/portable-net45+win+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/Plugin.Screenshot.dll",
+        "plugin.screenshot.0.0.1.nupkg.sha512",
+        "plugin.screenshot.nuspec"
+      ]
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Reflection.Metadata/1.6.0": {
       "sha512": "COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
       "type": "package",
@@ -742,6 +858,83 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Xam.Plugin.Screenshot/2.0.3": {
+      "sha512": "djgOkqnMkZ/huLwcPLFtUsHFCfNetocPDtZ3gpsehLd+imVW6GOvZeEPuhmqHB/AfUp8V7UiLg6Wk/5Dkxwfiw==",
+      "type": "package",
+      "path": "xam.plugin.screenshot/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/monoandroid10.0/Plugin.Screenshot.dll",
+        "lib/monoandroid10.0/Plugin.Screenshot.xml",
+        "lib/monoandroid80/Plugin.Screenshot.dll",
+        "lib/monoandroid80/Plugin.Screenshot.xml",
+        "lib/monoandroid81/Plugin.Screenshot.dll",
+        "lib/monoandroid81/Plugin.Screenshot.xml",
+        "lib/monoandroid90/Plugin.Screenshot.dll",
+        "lib/monoandroid90/Plugin.Screenshot.xml",
+        "lib/netstandard1.0/Plugin.Screenshot.dll",
+        "lib/netstandard1.0/Plugin.Screenshot.xml",
+        "lib/netstandard2.0/Plugin.Screenshot.dll",
+        "lib/netstandard2.0/Plugin.Screenshot.xml",
+        "lib/uap10.0.16299/Plugin.Screenshot.dll",
+        "lib/uap10.0.16299/Plugin.Screenshot.pri",
+        "lib/uap10.0.16299/Plugin.Screenshot.xml",
+        "lib/xamarinios10/Plugin.Screenshot.dll",
+        "lib/xamarinios10/Plugin.Screenshot.xml",
+        "xam.plugin.screenshot.2.0.3.nupkg.sha512",
+        "xam.plugin.screenshot.nuspec"
+      ]
+    },
+    "Xamarin.Essentials/1.5.2": {
+      "sha512": "qHxkrkx5jIC0X/qWhxCPZ3MuuOJm8bfCzAoUtlpOBSE4oV0JhrkTezK0A+IV+k/MeJ3zKc8FexaIXah9rlCTIw==",
+      "type": "package",
+      "path": "xamarin.essentials/1.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/monoandroid10.0/Xamarin.Essentials.dll",
+        "lib/monoandroid10.0/Xamarin.Essentials.pdb",
+        "lib/monoandroid10.0/Xamarin.Essentials.xml",
+        "lib/monoandroid80/Xamarin.Essentials.dll",
+        "lib/monoandroid80/Xamarin.Essentials.pdb",
+        "lib/monoandroid80/Xamarin.Essentials.xml",
+        "lib/monoandroid81/Xamarin.Essentials.dll",
+        "lib/monoandroid81/Xamarin.Essentials.pdb",
+        "lib/monoandroid81/Xamarin.Essentials.xml",
+        "lib/monoandroid90/Xamarin.Essentials.dll",
+        "lib/monoandroid90/Xamarin.Essentials.pdb",
+        "lib/monoandroid90/Xamarin.Essentials.xml",
+        "lib/netstandard1.0/Xamarin.Essentials.dll",
+        "lib/netstandard1.0/Xamarin.Essentials.pdb",
+        "lib/netstandard1.0/Xamarin.Essentials.xml",
+        "lib/netstandard2.0/Xamarin.Essentials.dll",
+        "lib/netstandard2.0/Xamarin.Essentials.pdb",
+        "lib/netstandard2.0/Xamarin.Essentials.xml",
+        "lib/tizen40/Xamarin.Essentials.dll",
+        "lib/tizen40/Xamarin.Essentials.pdb",
+        "lib/tizen40/Xamarin.Essentials.xml",
+        "lib/uap10.0.16299/Xamarin.Essentials.dll",
+        "lib/uap10.0.16299/Xamarin.Essentials.pdb",
+        "lib/uap10.0.16299/Xamarin.Essentials.pri",
+        "lib/uap10.0.16299/Xamarin.Essentials.xml",
+        "lib/xamarinios10/Xamarin.Essentials.dll",
+        "lib/xamarinios10/Xamarin.Essentials.pdb",
+        "lib/xamarinios10/Xamarin.Essentials.xml",
+        "lib/xamarintvos10/Xamarin.Essentials.dll",
+        "lib/xamarintvos10/Xamarin.Essentials.pdb",
+        "lib/xamarintvos10/Xamarin.Essentials.xml",
+        "lib/xamarinwatchos10/Xamarin.Essentials.dll",
+        "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
+        "lib/xamarinwatchos10/Xamarin.Essentials.xml",
+        "readme.txt",
+        "xamarin.essentials.1.5.2.nupkg.sha512",
+        "xamarin.essentials.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -749,7 +942,9 @@
       "FluentBuilder >= 0.9.0",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "NUnit >= 4.0.1",
-      "NUnit3TestAdapter >= 4.5.0"
+      "NUnit3TestAdapter >= 4.5.0",
+      "Plugin.Screenshot >= 0.0.1",
+      "Xam.Plugin.Screenshot >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -816,6 +1011,14 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[4.5.0, )"
+          },
+          "Plugin.Screenshot": {
+            "target": "Package",
+            "version": "[0.0.1, )"
+          },
+          "Xam.Plugin.Screenshot": {
+            "target": "Package",
+            "version": "[2.0.3, )"
           }
         },
         "imports": [
@@ -837,5 +1040,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Plugin.Screenshot 0.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Plugin.Screenshot",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

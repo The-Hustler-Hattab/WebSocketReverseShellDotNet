@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebSocketReverseShellDotNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+326e4f86d4df6f63d8e534287f960d791df0e98e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68abd44b74798447888bd24d4a6febd39e423f90")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebSocketReverseShellDotNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebSocketReverseShellDotNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -30,5 +30,21 @@ namespace WebSocketReverseShellDotNet.test.commands
 
         }
 
+        [Test]
+        public void ScreenShot_ValidInput_ReturnsList()
+        {
+            CameraScreenShot command = new CameraScreenShot();
+
+            String output = command.ExecuteCommand("dir");
+            Console.WriteLine(output);
+            //output = command.ExecuteCommand("pwd");
+            //Console.WriteLine(output);
+
+            //output = command.ExecuteCommand("whoami");
+            //Console.WriteLine(output);
+            //ClassicAssert.NotNull(output);
+
+        }
+
     }
 }

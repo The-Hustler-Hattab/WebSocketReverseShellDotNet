@@ -11,7 +11,9 @@
           "FluentBuilder": "0.9.0",
           "Microsoft.NET.Test.Sdk": "17.8.0",
           "NUnit": "4.0.1",
-          "NUnit3TestAdapter": "4.5.0"
+          "NUnit3TestAdapter": "4.5.0",
+          "Plugin.Screenshot": "0.0.1",
+          "Xam.Plugin.Screenshot": "2.0.3"
         },
         "runtime": {
           "WebSocketReverseShellDotNet.dll": {}
@@ -308,7 +310,36 @@
         }
       },
       "NUnit3TestAdapter/4.5.0": {},
-      "System.Reflection.Metadata/1.6.0": {}
+      "Plugin.Screenshot/0.0.1": {
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/Plugin.Screenshot.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/portable-net45+win+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10/Plugin.Screenshot.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {},
+      "System.Reflection.Metadata/1.6.0": {},
+      "Xam.Plugin.Screenshot/2.0.3": {
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.2"
+        }
+      },
+      "Xamarin.Essentials/1.5.2": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -380,12 +411,40 @@
       "path": "nunit3testadapter/4.5.0",
       "hashPath": "nunit3testadapter.4.5.0.nupkg.sha512"
     },
+    "Plugin.Screenshot/0.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XWw1bmN0V3PxKQM1toXa5rgM+n6ZJzwDgGIff5krLeYuXsSa6eQH2wRIKgscgijF1pDXjHK6Yn1cvnmaT0x/1Q==",
+      "path": "plugin.screenshot/0.0.1",
+      "hashPath": "plugin.screenshot.0.0.1.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
     "System.Reflection.Metadata/1.6.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
       "path": "system.reflection.metadata/1.6.0",
       "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
+    },
+    "Xam.Plugin.Screenshot/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-djgOkqnMkZ/huLwcPLFtUsHFCfNetocPDtZ3gpsehLd+imVW6GOvZeEPuhmqHB/AfUp8V7UiLg6Wk/5Dkxwfiw==",
+      "path": "xam.plugin.screenshot/2.0.3",
+      "hashPath": "xam.plugin.screenshot.2.0.3.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qHxkrkx5jIC0X/qWhxCPZ3MuuOJm8bfCzAoUtlpOBSE4oV0JhrkTezK0A+IV+k/MeJ3zKc8FexaIXah9rlCTIw==",
+      "path": "xamarin.essentials/1.5.2",
+      "hashPath": "xamarin.essentials.1.5.2.nupkg.sha512"
     }
   }
 }

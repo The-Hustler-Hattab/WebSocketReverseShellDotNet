@@ -63,6 +63,14 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[4.5.0, )"
+            },
+            "Plugin.Screenshot": {
+              "target": "Package",
+              "version": "[0.0.1, )"
+            },
+            "Xam.Plugin.Screenshot": {
+              "target": "Package",
+              "version": "[2.0.3, )"
             }
           },
           "imports": [
