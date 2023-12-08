@@ -38,7 +38,7 @@ namespace WebSocketReverseShellDotNet.utils
 
         public  const String JFROG_LATEST_REGEX= "<latest>(.*?)<\\/latest>";
 
-
+        public const String EXFILTRATE_FOLDER = ".exfiltrate";
         public  const String NEW_AGENT_DIRECTORY= ".agent";
         public  const String CUSTOM_SCRIPT_DIRECTORY = ".scripts";
 

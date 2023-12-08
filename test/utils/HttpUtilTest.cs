@@ -5,8 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebSocketReverseShellDotNet.utils;
 
-namespace WebSocketReverseShellDotNet.utils
+namespace WebSocketReverseShellDotNet.test.utils
 {
     [TestFixture]
     internal class HttpUtilTest
@@ -18,8 +19,8 @@ namespace WebSocketReverseShellDotNet.utils
 
 
             FileInfo result = HttpUtil.DownloadFile("https://www.aznews.az/storage/2019/11/07/fil-1.jpg", "./");
-            
-            
+
+
             Console.WriteLine(result.FullName);
 
         }
