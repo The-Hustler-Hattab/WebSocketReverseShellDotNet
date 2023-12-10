@@ -63,6 +63,17 @@ namespace WebSocketReverseShellDotNet.test.commands
 
         }
 
+        [Test]
+        public void Browser_ValidInput_ReturnsList()
+        {
+            BrowserExfelterator command = new BrowserExfelterator();
+
+            String output = command.ExecuteCommand("dir");
+            Console.WriteLine(output);
+
+
+        }
+
 
 
     }

