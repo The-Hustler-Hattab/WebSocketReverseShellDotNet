@@ -46,6 +46,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BouncyCastle.NetCore": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
             "Emgu.CV.runtime.windows": {
               "target": "Package",
               "version": "[4.8.1.5350, )"
