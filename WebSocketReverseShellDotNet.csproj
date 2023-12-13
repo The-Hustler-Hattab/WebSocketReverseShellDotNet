@@ -8,7 +8,13 @@
 	<UseWindowsForms>True</UseWindowsForms>
 	
 	<TargetFramework>net8.0-windows</TargetFramework>
+	
+	<ApplicationIcon>icon\program_icon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icon\program_icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
 	  <PackageReference Include="BouncyCastle.NetCore" Version="2.2.1" />

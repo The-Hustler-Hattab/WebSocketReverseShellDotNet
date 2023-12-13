@@ -1,2 +1,21 @@
 bin/*
 obj/*
+
+.vscode/
+.vs/
+
+
+# Rider files
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# NuGet
+packages/
+*.nupkg
+**/packages/*
