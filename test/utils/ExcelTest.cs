@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,7 +36,7 @@ namespace WebSocketReverseShellDotNet.test.utils
 
             FileInfo excelFileInfo = Excel.ConvertToExcel(dataDictionary, filePath);
 
-            Console.WriteLine(excelFileInfo.FullName);
+           /* Console.WriteLine(excelFileInfo.FullName);*/
 
 
         }

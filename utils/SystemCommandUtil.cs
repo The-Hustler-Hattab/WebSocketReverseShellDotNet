@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebSocketReverseShellDotNet.service.factory;
 using WebSocketReverseShellDotNet.service;
+using System.IO;
 
 namespace WebSocketReverseShellDotNet.utils
 {

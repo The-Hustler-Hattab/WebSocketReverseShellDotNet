@@ -2,6 +2,7 @@
 using NUnit.Framework.Legacy;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace WebSocketReverseShellDotNet.test.utils
             FileInfo result = HttpUtil.DownloadFile("https://www.aznews.az/storage/2019/11/07/fil-1.jpg", "./");
 
 
-            Console.WriteLine(result.FullName);
+            /*Console.WriteLine(result.FullName);*/
 
         }
 

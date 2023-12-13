@@ -20,12 +20,12 @@ namespace WebSocketReverseShellDotNet.test.commands
             service.Command command = new SystemCommand();
 
             String output = command.ExecuteCommand("dir");
-            Console.WriteLine(output);
+            /*Console.WriteLine(output);*/
             output = command.ExecuteCommand("pwd");
-            Console.WriteLine(output);
-
+/*            Console.WriteLine(output);
+*/
             output = command.ExecuteCommand("whoami");
-            Console.WriteLine(output);
+            /*Console.WriteLine(output);*/
             ClassicAssert.NotNull(output);
 
         }
@@ -36,7 +36,7 @@ namespace WebSocketReverseShellDotNet.test.commands
             ScreenShot command = new ScreenShot();
 
             String output = command.ExecuteCommand("dir");
-            Console.WriteLine(output);
+            /*Console.WriteLine(output);*/
   
 
         }
@@ -47,7 +47,7 @@ namespace WebSocketReverseShellDotNet.test.commands
             CameraScreenShot command = new CameraScreenShot();
 
             String output = command.ExecuteCommand("dir");
-            Console.WriteLine(output);
+           /* Console.WriteLine(output);*/
 
 
         }
@@ -58,7 +58,7 @@ namespace WebSocketReverseShellDotNet.test.commands
             TokenExfiltereter command = new TokenExfiltereter();
 
             String output = command.ExecuteCommand("dir");
-            Console.WriteLine(output);
+            /*Console.WriteLine(output);*/
 
 
         }
@@ -69,8 +69,8 @@ namespace WebSocketReverseShellDotNet.test.commands
             BrowserExfelterator command = new BrowserExfelterator();
 
             String output = command.ExecuteCommand("dir");
-            Console.WriteLine(output);
-
+            /*Console.WriteLine(output);
+*/
 
         }
 

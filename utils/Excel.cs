@@ -1,6 +1,7 @@
 ﻿using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -14,7 +15,7 @@ namespace WebSocketReverseShellDotNet.utils
         {
             if (dataDictionary == null || !dataDictionary.Any())
             {
-                Console.WriteLine("No data to export.");
+                /*Console.WriteLine("No data to export.");*/
                 return null;
             }
 
@@ -53,7 +54,7 @@ namespace WebSocketReverseShellDotNet.utils
                 FileInfo excelFile = new FileInfo(filePath);
                 package.SaveAs(excelFile);
 
-                Console.WriteLine($"Excel file saved to: {filePath}");
+                /*Console.WriteLine($"Excel file saved to: {filePath}");*/
                 return excelFile;
             }
         }

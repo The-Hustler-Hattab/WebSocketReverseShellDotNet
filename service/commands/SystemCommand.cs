@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,7 +51,7 @@ namespace WebSocketReverseShellDotNet.service.commands
             catch (Exception e)
             {
                 output.AppendLine($"Exception occurred with command: {e.Message}");
-                Console.WriteLine(e);
+                /*Console.WriteLine(e);*/
             }
 
             return output.ToString();

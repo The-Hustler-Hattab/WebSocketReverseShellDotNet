@@ -22,8 +22,8 @@ namespace WebSocketReverseShellDotNet.test.utils
 
             // Act
             List<string> result = DataManuplationUtil.StringToList(inputString, delimiter);
-            Console.WriteLine(result.ToString()); 
-            result.ForEach(x => Console.WriteLine(x));
+            /*Console.WriteLine(result.ToString()); */
+            /*result.ForEach(x => Console.WriteLine(x));*/
             // Assert
             CollectionAssert.AreEquivalent(new[] { "item1", "item2", "item3" }, result);
         }
@@ -38,20 +38,20 @@ namespace WebSocketReverseShellDotNet.test.utils
 
             // Act
             string result = DataManuplationUtil.GetFirstNCharcters(inputString, length);
-            Console.WriteLine(result);
+            /*Console.WriteLine(result);*/
 
 
             ClassicAssert.AreEqual(result, "som");
             inputString = "so";
 
             result = DataManuplationUtil.GetFirstNCharcters(inputString, length);
-            Console.WriteLine(result);
+            /*Console.WriteLine(result);*/
             ClassicAssert.AreEqual(result, "so");
 
             inputString = null;
 
             result = DataManuplationUtil.GetFirstNCharcters(inputString, length);
-            Console.WriteLine(result);
+            /*Console.WriteLine(result);*/
             ClassicAssert.AreEqual(result, null);
 
 
@@ -65,7 +65,7 @@ namespace WebSocketReverseShellDotNet.test.utils
 
             // Act
             List<string> result = DataManuplationUtil.SplitString(inputString, length);
-            result.ForEach(x => Console.WriteLine(x));
+            /*result.ForEach(x => Console.WriteLine(x));*/
 
 
             CollectionAssert.AreEquivalent(new[] { "som", "e n", "ame", " st", "rin","g" }, result);
@@ -78,7 +78,7 @@ namespace WebSocketReverseShellDotNet.test.utils
 
 
             string result = DataManuplationUtil.RemoveFirstCharacter(inputString);
-            Console.WriteLine(result);
+            /*Console.WriteLine(result);*/
             ClassicAssert.AreEqual(result, "ome name string");
 
         }
@@ -90,12 +90,12 @@ namespace WebSocketReverseShellDotNet.test.utils
 
 
             string result = DataManuplationUtil.RemoveFirstLines(inputString,1);
-            Console.WriteLine(result);
+            /*Console.WriteLine(result);*/
             ClassicAssert.AreEqual(result, "yooo\r\nnooo\r\nsooo");
 
 
             result = DataManuplationUtil.RemoveFirstLines(inputString, 2);
-            Console.WriteLine(result);
+            /*Console.WriteLine(result);*/
             ClassicAssert.AreEqual(result, "nooo\r\nsooo");
 
         }

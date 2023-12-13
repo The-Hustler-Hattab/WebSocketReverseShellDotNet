@@ -2,6 +2,7 @@
 using NUnit.Framework.Legacy;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace WebSocketReverseShellDotNet.test.utils
 
             //            String res = await S3Uploadutil.UploadToS3Async(fileToUpload);
             string resultMessage =  S3Uploadutil.UploadToS3(fileToUpload);
-            Console.WriteLine(resultMessage);
+            /*Console.WriteLine(resultMessage);*/
         }
     }
 }

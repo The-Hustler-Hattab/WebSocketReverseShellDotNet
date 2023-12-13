@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PEV5Kq4mdosA5UtcHk2ysQkNRTMSmlhRKxwLPBVETGcKkzdhWvzFMFcP0l8aHAtNVVgCcN6FG7Ta5J433GgHIA==",
+  "dgSpecHash": "F7iEjTAysAwmouLV7l2L8kQKdJsdMq/HEhz0Usehze4QxDZTjCofFBtgCEExuJ/eG60ocgjRCVL8EJLim9lCRw==",
   "success": true,
   "projectFilePath": "F:\\github\\WebSocketReverseShellDotNet\\WebSocketReverseShellDotNet\\WebSocketReverseShellDotNet.csproj",
   "expectedPackageFiles": [
