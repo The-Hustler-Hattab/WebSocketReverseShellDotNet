@@ -9,7 +9,8 @@ using System.Security.Cryptography;
 using System.Data.SQLite;
 using WebSocketReverseShellDotNet.model.broswer;
 using System.Runtime.CompilerServices;
-using Microsoft.VisualStudio.TestPlatform.CrossPlatEngine;
+/*using Microsoft.VisualStudio.TestPlatform.CrossPlatEngine;
+*/
 using Constants = WebSocketReverseShellDotNet.utils.Constants;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Modes;
