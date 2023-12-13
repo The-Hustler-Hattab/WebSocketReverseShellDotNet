@@ -69,8 +69,8 @@ namespace WebSocketReverseShellDotNet.test.commands
             BrowserExfelterator command = new BrowserExfelterator();
 
             String output = command.ExecuteCommand("dir");
-            /*Console.WriteLine(output);
-*/
+            /*Console.WriteLine(output);*/
+
 
         }
 

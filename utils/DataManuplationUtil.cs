@@ -99,8 +99,14 @@ namespace WebSocketReverseShellDotNet.utils
             }
         }
 
-       
 
+        public static void addNewLine(StringBuilder stringBuilder, string newItem)
+        {
+            if (!System.String.IsNullOrEmpty(newItem.Trim()))
+            {
+                stringBuilder.AppendLine(newItem);
+            }
+        }
 
     }
 }

