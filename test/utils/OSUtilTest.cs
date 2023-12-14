@@ -39,21 +39,7 @@ namespace WebSocketReverseShellDotNet.test.utils
 
 
 
-        [Test]
-        public void RunFunctionInThread_ValidInput_ReturnsList()
-        {
-
-            string test = "a";
-            OSUtil.RunFunctionInThreadAsync(() =>
-            {
-                test = "b";
-               /* Console.WriteLine("hello world ");*/
-
-            });
-            
-            /*Console.WriteLine(test);*/
-
-        }
+  
 
         [Test]
         public void FileExists_ValidInput_ReturnsList()

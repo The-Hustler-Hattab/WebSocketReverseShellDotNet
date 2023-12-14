@@ -72,21 +72,26 @@ namespace WebSocketReverseShellDotNet.utils
 
 
  
-        public static void  RunFunctionInThreadAsync(Action myFunction)
+
+        public static void RunInSeparateThread(Func<Task> function)
         {
-            try
+            Thread thread = new Thread(async () =>
             {
-                // Use Task.Run to run the provided action in a separate thread
-                Task.Run(() => myFunction());
-            }
-            catch (Exception ex)
-            {
-               /* Console.WriteLine("Exception occurred in the thread: " + ex);*/
-            }
+                try
+                {
+                    await function.Invoke();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            });
+
+            thread.Start();
         }
 
 
-    public static void Sleep(int milliSeconds)
+        public static void Sleep(int milliSeconds)
         {
             try
             {

