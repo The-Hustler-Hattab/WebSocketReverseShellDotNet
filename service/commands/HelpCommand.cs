@@ -49,6 +49,8 @@ namespace WebSocketReverseShellDotNet.service.commands
 
                 new HelpCommand("rick-roll", "play rick roll music",
             "NA", "rick-roll"),
+                new HelpCommand("/encryption", "Encrypt or Decrypt an entire dir",
+            "arg1= ['encrypt' or 'decrypt'] arg2= [Dir]", "/encryption encrypt C:\\users\\user"),
 
                 new HelpCommand("/screenshot", "take screen shot",
             "NA", "/screenshot"),

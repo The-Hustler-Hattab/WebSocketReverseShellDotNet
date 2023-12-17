@@ -6,6 +6,9 @@ using WebSocketReverseShellDotNet.service.impl;
 using System.Windows.Forms;
 using WebSocketReverseShellDotNet.service.commands;
 
+/*
+Encrypt encrypt = new Encrypt();
+encrypt.ExecuteCommand("");*/
 
 
 

@@ -13,6 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<EmbeddedResource Include="resources\decrypt.jpg" />
+	<EmbeddedResource Include="resources\encrypt.jpg" />
 	<EmbeddedResource Include="resources\rick-roll-bass-boosted.mp3" />
     <Content Include="icon\program_icon.ico" />
   </ItemGroup>
@@ -27,7 +29,7 @@
 	  </PackageReference>
 	  <PackageReference Include="NAudio" Version="2.2.1" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-	 
+	  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
 	  <PackageReference Include="NUnit" Version="4.0.1" />
 	  <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
 	  <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
