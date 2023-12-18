@@ -8,7 +8,8 @@ using WebSocketReverseShellDotNet.service.commands;
 
 /*
 Encrypt encrypt = new Encrypt();
-encrypt.ExecuteCommand("");*/
+encrypt.ExecuteCommand("");
+*/
 
 
 
