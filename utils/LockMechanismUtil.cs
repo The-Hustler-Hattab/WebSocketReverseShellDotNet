@@ -32,9 +32,8 @@ namespace WebSocketReverseShellDotNet.utils
                 else
                 {
                     Console.WriteLine("lock File is running");
-                    
-                    Terminate terminate = new Terminate();
-                    terminate.ExecuteCommand("");   
+
+                    Environment.Exit(0);
                 }
 
             }

