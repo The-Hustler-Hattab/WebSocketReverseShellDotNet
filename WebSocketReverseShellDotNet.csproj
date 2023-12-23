@@ -10,6 +10,8 @@
 	<TargetFramework>net8.0-windows</TargetFramework>
 	
 	<ApplicationIcon>icon\program_icon.ico</ApplicationIcon>
+	
+	<ApplicationManifest>resources\app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
