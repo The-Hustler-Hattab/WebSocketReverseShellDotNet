@@ -1,14 +1,19 @@
 # .NET Reverse Shell with Websockets
 
-This .NET project implements a reverse shell that connects to a command and control server using websockets.
+This .NET project implements a reverse shell that connects to a command and control server using WebSocket.
 
 ## Features
 
-- Upload Files to S3 bucket
-- Play rick roll on target computer
-- Access camera 
-- Exfilterte Browser Credentials
-- Encrypt Files
+- Remote Shell  
+- Upload Files to Command and Control Server  
+- Play rick roll on target computer  
+- Access Camera  
+- Screen Capture  
+- Exfiltrate Browser Info (cookies, history, passwords, credit cards, and download history)  
+- Encrypt Files (Ransomware)  
+- Token Stealing (Discord, AWS, AZURE, GCP, etc)  
+- DOS Attack  
+
 
 ## Table of Contents
 

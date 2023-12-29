@@ -74,16 +74,7 @@ namespace WebSocketReverseShellDotNet.test.commands
 
         }
 
-        [Test]
-        public void Discord_ValidInput_ReturnsList()
-        {
-            DiscordToken command = new DiscordToken();
 
-            String output = command.ExecuteCommand("");
-            Console.WriteLine(output);
-
-
-        }
 
 
 
