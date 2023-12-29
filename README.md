@@ -74,7 +74,7 @@ Implement additional security measures as needed for your specific use case.
 [C2 UI](https://github.com/The-Hustler-Hattab/c2-ui)  
 [C2 Server](https://github.com/The-Hustler-Hattab/C2JavaServer)   
 [C2 Java Agent](https://github.com/The-Hustler-Hattab/ReverseShellWebSocketAgent)  
-[C2 C# .NET Agent (RECOMMENDED)](https://github.com/The-Hustler-Hattab/WebSocketReverseShellDotNet)
+[C2 C# .NET Agent (RECOMMENDED)](https://github.com/The-Hustler-Hattab/WebSocketReverseShellDotNet)  
 
 ## Contributing
 Contributions are welcome! 
