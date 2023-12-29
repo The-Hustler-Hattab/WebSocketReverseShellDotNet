@@ -14,6 +14,7 @@ This .NET project implements a reverse shell that connects to a command and cont
 - Token Stealing (Discord, AWS, AZURE, GCP, etc)  
 - Persistence via Windows Scheduler
 - DOS Attack  
+- Monitor Clipboard for BTC Addresses and Replace with Attacker's defined Address  
 
 
 ## Table of Contents
