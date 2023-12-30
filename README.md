@@ -54,8 +54,8 @@ Before you begin, ensure you have the following prerequisites:
     ```
 
 ## Usage
-The project will generate jar with dependencies and exe file.
-To use the reverse shell, click on the exe file. The reverse shell will connect to the command and control server and wait for commands.
+
+The executable file produced by the project will enable the activation of a reverse shell. Simply execute the exe file to initiate the reverse shell, which will establish a connection with the command and control server, ready to receive and execute commands.
 
 ## Configuration
 Configure the reverse shell by editing the utils/constants file. Update the following properties:
