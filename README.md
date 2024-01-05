@@ -76,6 +76,7 @@ Implement additional security measures as needed for your specific use case.
 [C2 Server](https://github.com/The-Hustler-Hattab/C2JavaServer)   
 [C2 Java Agent](https://github.com/The-Hustler-Hattab/ReverseShellWebSocketAgent)  
 [C2 C# .NET Agent (RECOMMENDED)](https://github.com/The-Hustler-Hattab/WebSocketReverseShellDotNet)  
+[Malware Distribution Phishing Page](https://github.com/The-Hustler-Hattab/obs-project-phishing)  
 
 ## Contributing
 Contributions are welcome! 
